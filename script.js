@@ -1,4 +1,3 @@
-
 let multiplier = 1.00;
 let crashPoint = 0;
 let gameInterval;
@@ -8,6 +7,7 @@ const multiplierEl = document.getElementById('multiplier');
 const startBtn = document.getElementById('startBtn');
 const cashOutBtn = document.getElementById('cashOutBtn');
 const resultEl = document.getElementById('result');
+const plane = document.getElementById('plane');
 
 function getCrashPoint() {
   return parseFloat((Math.random() * 10 + 1).toFixed(2)); // 1.00x to 11.00x
@@ -20,10 +20,16 @@ function startGame() {
   cashOutBtn.disabled = false;
   resultEl.textContent = '';
   multiplierEl.textContent = multiplier.toFixed(2) + "x";
+  plane.style.left = "0px";
+
+  let planePosition = 0;
 
   gameInterval = setInterval(() => {
     multiplier += 0.01;
     multiplierEl.textContent = multiplier.toFixed(2) + "x";
+    planePosition += 2;
+    plane.style.left = planePosition + "px";
+
     if (multiplier >= crashPoint) {
       endGame(false);
     }
