@@ -1,35 +1,61 @@
+
 body {
+  background: #0f0f0f;
+  color: #00ffcc;
   font-family: Arial, sans-serif;
-  background: #121212;
-  color: #fff;
   text-align: center;
-  padding-top: 50px;
 }
 
-.container {
-  width: 300px;
+.main {
+  max-width: 600px;
   margin: auto;
+}
+
+#game {
   background: #1e1e1e;
   padding: 20px;
+  margin: 20px auto;
   border-radius: 10px;
-}
-
-#multiplier {
-  font-size: 2em;
-  margin: 20px 0;
+  position: relative;
 }
 
 #plane {
   font-size: 2em;
-  margin: 20px 0;
-  position: relative;
-  left: 0;
+  position: absolute;
+  left: 10px;
+  top: 20px;
   transition: left 0.05s linear;
+}
+
+#multiplier {
+  font-size: 2em;
+  margin-top: 50px;
 }
 
 button {
   padding: 10px 20px;
   margin: 10px;
-  font-size: 1em;
+  font-size: 1.2em;
   cursor: pointer;
+  background: #00ffcc;
+  border: none;
+  border-radius: 5px;
+}
+
+#balance, #result {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.multiplayer {
+  background: #1a1a1a;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#players {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
